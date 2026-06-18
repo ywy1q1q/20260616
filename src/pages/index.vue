@@ -21,18 +21,21 @@
           2. 沒有目前事項也沒有未完成事項
         -->
         <v-btn
+          color="blue-darken-4"
           :disabled="status === STATUS.COUNTING || (list.currentItem.length === 0 && list.items.length === 0)"
           icon="mdi-play"
           @click="startTimer"
         />
         <!-- 只有倒數中才能暫停 -->
         <v-btn
+          color="blue-darken-4"
           :disabled="status !== STATUS.COUNTING"
           icon="mdi-pause"
           @click="pauseTimer"
         />
         <!-- 目前有事項才能跳過 -->
         <v-btn
+          color="blue-darken-4"
           :disabled="list.currentItem.length === 0"
           icon="mdi-skip-next"
           @click="finish"
